@@ -18,9 +18,6 @@ var currentGoal = (Math.floor(Math.random() * 101 + 19));
 
 
 
-
-
-
 //reset function to regenerate values for the gems and set total score to 0
 function reset() {
     rubyValue = (Math.floor(Math.random() * 11 + 1));
@@ -77,11 +74,6 @@ $("#diamond").on("click", function () {
     $("#total-score").html(totalScore)
     verify();
 })
-
-console.log(currentGoal)
-console.log(totalScore)
-
-
 
 
 $("#wins").html("Wins: " + wins);
