@@ -18,27 +18,29 @@ var currentGoal = (Math.floor(Math.random() * 101 + 19));
 
 
 
-//reset function to regenerate values for the gems and set total score to 0
-function reset() {
-    rubyValue = (Math.floor(Math.random() * 11 + 1));
-    diamondValue = (Math.floor(Math.random() * 11 + 1));
-    emeraldValue = (Math.floor(Math.random() * 11 + 1));
-    amethystValue = (Math.floor(Math.random() * 11 + 1));
-    currentGoal = (Math.floor(Math.random() * 101 + 19));
-    $("#current-goal").html(currentGoal);
-    totalScore = 0;
-    $("#total-score").html(totalScore);
-}
 
-function verify(){
-    
+
+function verify() {
+
+    //reset function to regenerate values for the gems and set total score to 0
+    function reset() {
+        rubyValue = (Math.floor(Math.random() * 11 + 1));
+        diamondValue = (Math.floor(Math.random() * 11 + 1));
+        emeraldValue = (Math.floor(Math.random() * 11 + 1));
+        amethystValue = (Math.floor(Math.random() * 11 + 1));
+        currentGoal = (Math.floor(Math.random() * 101 + 19));
+        $("#current-goal").html(currentGoal);
+        totalScore = 0;
+        $("#total-score").html(totalScore);
+    }
+
     if (currentGoal === totalScore) {
         reset();
         wins++;
         $("#wins").html("Wins: " + wins);
         $("#winorlose").html("You Won!")
     }
-    
+
     if (totalScore > currentGoal) {
         reset();
         losses++;
