@@ -38,13 +38,16 @@ function verify(){
     if (currentGoal === totalScore) {
         reset();
         wins++;
+        $("#wins").html("Wins: " + wins);
         $("#winorlose").html("You Won!")
     }
     
     if (totalScore > currentGoal) {
         reset();
         losses++;
+        $("#losses").html("Losses: " + losses);
         $("#winorlose").html("You Lost!");
+
     }
 }
 
