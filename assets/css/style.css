@@ -1,0 +1,63 @@
+img{
+    max-width: 100px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+h1{
+    text-emphasis: bolder;
+}
+
+#game-header{
+    color: white;
+    background-color: orange;
+    font-size: 40px;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+
+#instructions{
+    color: green;
+    background-color: salmon;
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#scoreboard{
+    text-align: center;
+    width: 250px;
+    height: 75px;
+    background-color: forestgreen;
+    color: white;
+    margin-right: 5px;
+}
+
+#current-goal{
+    font-size: 30px;
+}
+
+#wins-losses{
+    background-color: cyan;
+    width: 100px;
+    height: 75px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#current-score{
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    width: 300px;
+}
+
+#total-score{
+    height: 100px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
