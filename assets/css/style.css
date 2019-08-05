@@ -29,10 +29,11 @@ h1{
 #scoreboard{
     text-align: center;
     width: 250px;
-    height: 75px;
+    height: 95px;
     background-color: forestgreen;
     color: white;
     margin-right: 5px;
+    padding-top: 20px;
 }
 
 #current-goal{
@@ -42,7 +43,7 @@ h1{
 #wins-losses{
     background-color: cyan;
     width: 100px;
-    height: 75px;
+    height: 95px;
     text-align: center;
     padding-top: 15px;
 }

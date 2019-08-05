@@ -6,34 +6,25 @@ var totalScore = 0;
 
 
 //values for each of the gems is randomly generated
-var rubyValue = (Math.floor(Math.random() * 12));
-var diamondValue = (Math.floor(Math.random() * 12));
-var emeraldValue = (Math.floor(Math.random() * 12));
-var amethystValue = (Math.floor(Math.random() * 12));   
+var rubyValue = (Math.floor(Math.random() * 11 + 1));
+var diamondValue = (Math.floor(Math.random() * 11 + 1));
+var emeraldValue = (Math.floor(Math.random() * 11 + 1));
+var amethystValue = (Math.floor(Math.random() * 11 + 1));   
 
 
 //goal for each game is randomly generated with a max being at 120. needs to have a floor of 19
- var currentGoal = (Math.floor(Math.random() * 120));
+ var currentGoal = (Math.floor(Math.random() * 101 + 19));
 
 //reset function to regenerate values for the gems and set total score to 0
 function reset(){
-    rubyValue = (Math.floor(Math.random() * 12));
-    diamondValue = (Math.floor(Math.random() * 12));
-    emeraldValue = (Math.floor(Math.random() * 12));
-    amethystValue = (Math.floor(Math.random() * 12));
-    currentGoal = (Math.floor(Math.random() * 120));
+    rubyValue = (Math.floor(Math.random() * 11 + 1));
+    diamondValue = (Math.floor(Math.random() * 11 + 1));
+    emeraldValue = (Math.floor(Math.random() * 11 + 1));
+    amethystValue = (Math.floor(Math.random() * 11 + 1));
+    currentGoal = (Math.floor(Math.random() * 101 + 19));
     totalScore = 0;   
 }
 
-function currentGoalFloor(){
-    //ensures that the game's target score is more than 19.
-    
-}
-console.log(currentGoal)
-
-    if(currentGoal < 19){
-    currentGoal + 19;
-    }
 
     $("#current-goal").html(currentGoal);
 
@@ -57,14 +48,21 @@ console.log(currentGoal)
         $("#total-score").html(totalScore)
     })
 
+    console.log(currentGoal)
+    console.log(totalScore)
+
     if(currentGoal === totalScore){
         reset();
         wins++;
+        $("#winorlose").html("You Won!")
     }
+
     if(totalScore > currentGoal){
         reset();
         losses++;
+        $("#winorlose").html("You Lost!")
     }
+
     $("#wins").html("Wins: " + wins);
     $("#losses").html("Losses: " + losses);
 
